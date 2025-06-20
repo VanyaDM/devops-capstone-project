@@ -1,17 +1,17 @@
 name: CI build
-
 on:
   push:
     branches:
-      - "main"
+      - main
   pull_request:
     branches:
-      - "main"
+      - main
 
 jobs:
   build:
     runs-on: ubuntu-latest
     container: python:3.9-slim
+    
     services:
       postgres:
         image: postgres:alpine
